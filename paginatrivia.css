@@ -1,0 +1,79 @@
+:root {
+    --celeste: #74ACDF;
+    --blanco: #FFFFFF;
+    --gris: #2C3E50;
+    --verde: #2ECC71;
+    --rojo: #E74C3C;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor-trivia {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 550px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    border-top: 8px solid var(--celeste);
+}
+
+h1 { color: var(--gris); font-size: 24px; }
+
+.progreso { color: #7f8c8d; margin-bottom: 15px; }
+
+.pregunta-texto {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--gris);
+    margin-bottom: 20px;
+}
+
+.opciones-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opcion-btn {
+    background-color: #f8f9fa;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.opcion-btn:hover:not(:disabled) {
+    background-color: #edf2f7;
+    border-color: var(--celeste);
+}
+
+.opcion-btn.bien { background-color: #d4edda !important; border-color: var(--verde) !important; color: #155724; }
+.opcion-btn.mal { background-color: #f8d7da !important; border-color: var(--rojo) !important; color: #721c24; }
+
+.siguiente-btn, .reiniciar-btn {
+    margin-top: 20px;
+    background-color: var(--gris);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.reiniciar-btn { display: inline-block; background-color: var(--celeste); }

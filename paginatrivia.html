@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Ciencia de Datos - Argentina</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div class="contenedor-trivia">
+        <h1>Trivia Ciencia de Datos: Argentina 🇦🇷</h1>
+        <div class="progreso" id="progreso-texto">Conectando con Supabase...</div>
+        
+        <div id="pantalla-pregunta">
+            <img id="pregunta-imagen" src="" alt="Imagen de la pregunta" style="display:none; max-width:100%; height:auto; border-radius:10px; margin-bottom:15px;">
+            
+            <div class="pregunta-texto" id="pregunta">Cargando datos...</div>
+            <div class="opciones-lista" id="opciones-contenedor"></div>
+            <button class="siguiente-btn" id="btn-siguiente">Siguiente ➔</button>
+        </div>
+
+        <div class="pantalla-final" id="pantalla-final" style="display: none;">
+            <h2>¡Fin de la Trivia!</h2>
+            <div class="puntaje-grande" id="puntaje-final">0 / 0</div>
+            <p id="mensaje-final"></p>
+            <button class="reiniciar-btn" id="btn-reiniciar">Reiniciar 🔄</button>
+        </div>
+    </div>
+
+    <script src="conexion.js"></script>
+</body>
+</html>
